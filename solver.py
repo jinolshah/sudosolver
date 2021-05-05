@@ -77,6 +77,16 @@ def checker(entry):
     else:
         return False
 
+def solution(entry):
+    sudoku = []
+    for i in range(9):
+        sublst = []
+        for j in range(9):
+            sublst.append(entry[i][j]['obj'].get())
+        sudoku.append(sublst)
+    print(sudoku)
+
 def solver(entry):
     entValid = checker(entry)
-    print(entValid)
+    if entValid:
+        solution(entry)

@@ -1,8 +1,15 @@
 from tkinter import *
 from solver import *
+from mover import *
 
 root = Tk()
 root.title("SudoSolver")
+
+def binder(ele, entry):
+    ele.bind('<Down>', lambda event, enter=entry: downer(event, enter))
+    ele.bind('<Up>', lambda event, enter=entry: upper(event, enter))
+    ele.bind('<Left>', lambda event, enter=entry: lefter(event, enter))
+    ele.bind('<Right>', lambda event, enter=entry: righter(event, enter))
 
 def clearer(entry):
     for i in entry:
@@ -40,6 +47,10 @@ for i in range(9):
                         'fg': 'black'})
         subentry[j]['obj'].grid(row=i, column=j, ipady=6, padx=1, pady=1)
     entry.append(subentry)
+
+for i in entry:
+    for j in i:
+        binder(j['obj'], entry)
 
 clear = Button(text='Clear', width=14, command=lambda:clearer(entry))
 clear.grid(column=0, row = 10, columnspan=3, pady=6)
