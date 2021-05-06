@@ -1,5 +1,5 @@
 from checker import *
-from pprint import pprint
+# from pprint import pprint
 import copy
 
 def row(unsudoku, k, i, j):
@@ -87,15 +87,17 @@ def solution(unsudoku):
     unsudoku[i][j] = 0
     return False
 
-def solver(entry):
+def solver(entry, solve):
     entValid = checker(entry)
     if entValid:
         sudoku = matrixgen(entry)
         unsudoku = copy.deepcopy(sudoku)
         if solution(unsudoku):
-            pprint(unsudoku)
+            # pprint(unsudoku)
             for i in range(9):
                 for j in range(9):
                     if not sudoku[i][j]:
-                        entry[i][j]['obj'].config(fg='#5E8C77')
+                        entry[i][j]['obj'].config(disabledforeground='#5E8C77')
                         entry[i][j]['obj'].insert(0, unsudoku[i][j])
+                    entry[i][j]['obj'].config(state='disabled')
+            solve.config(state="disabled")
