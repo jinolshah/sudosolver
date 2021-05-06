@@ -16,8 +16,9 @@ def clearer(entry, solve):
         for j in i:
             j['obj'].config(state='normal', disabledforeground='black')
             j['obj'].delete(0, END)
-    # blacker(entry)
+    blacker(entry)
     solve.config(state='normal')
+    entry[0][0]['obj'].focus()
 
 def color(i, j):
     if i in range(0,3) or i in range (6,9):
@@ -46,7 +47,7 @@ for i in range(9):
     for j in range(9):
         colored = color(i,j)
         subentry.append({'obj': Entry(root, name=str(i)+str(j), justify='center',
-                                bg=colored, disabledbackground=colored,
+                                bg=colored, disabledbackground=colored, disabledforeground='black', 
                                 width=3, font = "Helvetica 16",
                                 validate='all', validatecommand=validator),
                         'bg': colored,
