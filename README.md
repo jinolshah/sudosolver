@@ -15,6 +15,7 @@ For the solution, the program uses a brute force method wherein it performs the 
   3. Move on to the next empty block and fill in with a valid number.
   4. If no number is valid for the block, the program returns to the previously edited block and changes the value to the next valid number.
   5. This loop continues till the last empty block is filled.
+
 Recursion is used to carry out this logic.
 Once done, it displays the solution on the screen in green while the entered numbers from the user are still black.
 To enter another sudoku problem, the user must clear out the previous solution using the Clear button.
