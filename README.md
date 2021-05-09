@@ -5,7 +5,7 @@ One can use the program through the executable file (.exe, only for windows) and
 To run it through the source script, you'll need Python (script written in Python v3.9.1) installed on your computer. 
 The GUI is made using Tkinter which is the standard Python interface to the Tk GUI toolkit and is installed by default with your python installation.
 ### GUI
-The input boxes for the numbers are the Tkinter Entry widget. A 9x9 grid of the widget is generated using a for loop. The loop assigns the grid color to make them distinguishablea and adds the Entry widget object to a dictonary along with the color data.
+The input boxes for the numbers are the Tkinter Entry widget. A 9x9 grid of the widget is generated using a for loop. The loop assigns colors to a block according to its positon in the grid to make them distinguishable. Thereafter, the Entry widget object is added to a dictionary to a dictonary along with the color data.
 There are just 3 buttons - Clear, Solve, Exit. These buttons are made using the Tkinter Button widget.
 The Clear button is to clear the all the entry boxes. Clicking the Solve button returns the solution to the sudoku you enter. The returned solution is green while the entered numbers are black. The Exit box closes the program.
 The sudoku grid and the buttons are arranged using the grid method in Tkinter.
