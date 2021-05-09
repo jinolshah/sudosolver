@@ -1,7 +1,7 @@
 # SudoSolver
 SudoSolver is a minimalist sudoku solver made with purely Python. All you have to do is input an unsolved sudoku and the program solves it for you.
 ### Dependencies
-You can use the program through the executable file(.exe, only for windows) and won't need to install anything else.\n\n
+You can use the program through the executable file(.exe, only for windows) and won't need to install anything else.
 To run it through the source script, you'll need Python (script written in Python v3.9.1) installed on your computer. The GUI is made using Tkinter which is the standard Python interface to the Tk GUI toolkit and is installed by default with your python installation.
 ### GUI
 The input boxes for the numbers are the Tkinter Entry widget. A 9x9 grid of the widget is generated using a for loop. The loop assigns the grid color to make them distinguishablea and adds the Entry widget object to a dictonary along with the color data.
