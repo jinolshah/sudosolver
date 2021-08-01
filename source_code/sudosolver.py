@@ -7,9 +7,6 @@ import webbrowser
 root = Tk()
 root.title("SudoSolver")
 
-root.maxsize(378, 441)
-root.minsize(378, 441)
-
 def linker(event):
     webbrowser.open_new_tab(repolink)
 
